@@ -1,5 +1,6 @@
 import fetchWeather from './datafetch/fetch-weather';
 import getUserLocation from './datafetch/get-geolocation';
+import './styles.css';
 
 async function drawUI() {
   // Fetching user location from browser ang getting coords
@@ -18,6 +19,8 @@ async function drawUI() {
       'beforeend',
       `${Number(resp.main.temp).toFixed(0)} C in ${resp.name}`
     );
+
+    // document.body.insertAdjacentHTML('beforeend');
   });
 }
 
