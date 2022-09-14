@@ -1,6 +1,6 @@
 function getUserLocation() {
-  return new Promise((res, rej) =>
-    navigator.geolocation.getCurrentPosition(res, rej)
+  return new Promise((resolve, reject) =>
+    navigator.geolocation.getCurrentPosition(resolve, reject)
   );
 }
 
