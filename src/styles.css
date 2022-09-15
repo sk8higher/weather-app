@@ -41,6 +41,7 @@ img {
 
 :root {
   --main-gray-color: #272727;
+  --secondary-gray-color: #a0a0a0;
 }
 
 html {
@@ -89,5 +90,16 @@ body {
 
 .location-container {
   width: 60%;
+  padding: 0 80px;
 }
 
+.location-city {
+  color: var(--main-gray-color);
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.location-country-code {
+  font-size: 24px;
+  color: var(--secondary-gray-color);
+}
