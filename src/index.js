@@ -4,6 +4,8 @@ import mainWeatherComponent from './components/main-weather-component';
 import locationComponent from './components/location-component';
 import './styles.css';
 
+const wrapper = document.querySelector('.wrapper');
+
 async function drawUI() {
   // Fetching user location from browser ang getting coords
   const { latitude: lat, longitude: lng } = await getUserLocation().then(
@@ -16,8 +18,8 @@ async function drawUI() {
   // Fetching the weather and appending info to the page
   fetchWeather(link).then((resp) => {
     console.log(resp);
-    document.body.insertAdjacentHTML('beforeend', locationComponent(resp));
-    document.body.insertAdjacentHTML('beforeend', mainWeatherComponent(resp));
+    wrapper.insertAdjacentHTML('beforeend', locationComponent(resp));
+    wrapper.insertAdjacentHTML('beforeend', mainWeatherComponent(resp));
 
     // document.body.insertAdjacentHTML('beforeend');
   });
