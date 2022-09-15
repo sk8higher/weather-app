@@ -103,3 +103,20 @@ body {
   font-size: 24px;
   color: var(--secondary-gray-color);
 }
+
+.extra-info-container {
+  width: 100%;
+  font-size: 24px;
+}
+
+.extra-info__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.extra-info__text {
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 10px;
+}
