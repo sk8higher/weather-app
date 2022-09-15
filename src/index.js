@@ -2,6 +2,8 @@ import fetchWeather from './datafetch/fetch-weather';
 import getUserLocation from './datafetch/get-geolocation';
 import mainWeatherComponent from './components/main-weather-component';
 import locationComponent from './components/location-component';
+import extraInfoComponent from './components/extra-info-component';
+
 import './styles.css';
 
 const wrapper = document.querySelector('.wrapper');
@@ -20,6 +22,9 @@ async function drawUI() {
     console.log(resp);
     wrapper.insertAdjacentHTML('beforeend', locationComponent(resp));
     wrapper.insertAdjacentHTML('beforeend', mainWeatherComponent(resp));
+
+    const mainWeatherEl = document.querySelector('.main-weather-container');
+    mainWeatherEl.insertAdjacentHTML('beforeend', extraInfoComponent(resp));
 
     // document.body.insertAdjacentHTML('beforeend');
   });
