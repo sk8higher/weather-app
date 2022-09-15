@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
 
 /* RESET */
 html {
@@ -39,6 +39,42 @@ img {
 
 /* RESET */
 
+:root {
+  --main-gray-color: #272727;
+}
+
 html {
   font-family: 'IBM Plex Mono', serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-weather-container {
+  padding: 40px 80px;
+  background-color: var(--main-gray-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-radius: 20px;
+}
+
+.weather-info {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main-weather__temp-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-weather-degrees {
+  font-weight: 600;
+  font-size: 24px;
 }
