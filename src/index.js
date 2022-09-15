@@ -1,5 +1,7 @@
 import fetchWeather from './datafetch/fetch-weather';
 import getUserLocation from './datafetch/get-geolocation';
+import mainWeatherComponent from './components/main-weather-component';
+import locationComponent from './components/location-component';
 import './styles.css';
 
 async function drawUI() {
@@ -14,11 +16,8 @@ async function drawUI() {
   // Fetching the weather and appending info to the page
   fetchWeather(link).then((resp) => {
     console.log(resp);
-    document.body.insertAdjacentHTML('beforeend', 'it is  ');
-    document.body.insertAdjacentHTML(
-      'beforeend',
-      `${Number(resp.main.temp).toFixed(0)} C in ${resp.name}`
-    );
+    document.body.insertAdjacentHTML('beforeend', locationComponent(resp));
+    document.body.insertAdjacentHTML('beforeend', mainWeatherComponent(resp));
 
     // document.body.insertAdjacentHTML('beforeend');
   });
