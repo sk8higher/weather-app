@@ -5,9 +5,9 @@ function mainWeatherComponent(weatherInfo) {
 
   return `
   <div class="main-weather-container">
-  <div class="main-weather__info-container">
-    <p class="weather-info">${description}</p>
-  </div>
+    <div class="main-weather__info-container">
+      <p class="weather-info">${description}</p>
+    </div>
     <div class="main-weather__temp-container">
       <img class="weather-icon" src="http://openweathermap.org/img/wn/${icon}.png"/>
       <p class="main-weather-degrees">${deg}°C</p>
