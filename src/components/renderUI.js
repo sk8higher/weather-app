@@ -11,7 +11,7 @@ import '../styles.css';
  * @param {HTMLElement} element
  * @param {string} link
  */
-async function renderUI(element, link) {
+function renderUI(element, link) {
   fetchWeather(link).then((resp) => {
     element.innerHTML = '';
     element.insertAdjacentHTML('beforeend', searchBarComponent());

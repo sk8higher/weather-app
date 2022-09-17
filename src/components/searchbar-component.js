@@ -2,7 +2,8 @@ function searchBarComponent() {
   return `
   <div class="search-form-container">
     <form class="search-form">
-      <input id="searchbar" type="text" class="input" placeholder="search for a city"/>
+      <input id="searchbar" minlength="3" pattern="[a-zA-Z]*" type="text" class="input" placeholder="search for a city"/>
+      <p class="error"></p>
     </form>
   </div>`;
 }
