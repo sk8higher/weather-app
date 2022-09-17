@@ -1,8 +1,12 @@
 async function fetchWeather(link) {
-  const res = await fetch(link);
-  const resJson = await res.json();
+  try {
+    const res = await fetch(link);
+    const resJson = await res.json();
 
-  return resJson;
+    return resJson;
+  } catch (error) {
+    throw new Error(`Failed to fetch weather: ${error}`);
+  }
 }
 
 export default fetchWeather;
