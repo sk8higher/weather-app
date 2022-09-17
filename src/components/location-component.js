@@ -10,7 +10,7 @@ function locationComponent(weatherInfo) {
   </div>
   `;
   } catch (error) {
-    return 'Failed to get country location';
+    return '<p class="error">Failed to get city location. Check spelling and try again</p>';
   }
 }
 
