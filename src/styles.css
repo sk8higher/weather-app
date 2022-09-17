@@ -58,9 +58,27 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
   align-items: center;
-  height: 50%;
+  height: 100%;
+}
+
+.search-form-container,
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#searchbar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 2px 17px 4px rgba(34, 60, 80, 0.2);
+  width: 40%;
 }
 
 .main-weather-container {
