@@ -81,6 +81,11 @@ body {
   width: 40%;
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+}
+
 .main-weather-container {
   padding: 40px 80px;
   background-color: var(--main-gray-color);
